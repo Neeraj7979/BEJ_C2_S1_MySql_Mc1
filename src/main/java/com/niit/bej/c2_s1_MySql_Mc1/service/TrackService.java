@@ -13,5 +13,7 @@ public interface TrackService {
 
     Track updateTrack(Track track, Integer id);
 
+    List<Track> fetchByArtistName(String artistName);
+
 
 }
