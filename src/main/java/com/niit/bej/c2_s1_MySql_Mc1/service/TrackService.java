@@ -11,5 +11,7 @@ public interface TrackService {
 
     Track getTrackById(Integer id);
 
+    Track updateTrack(Track track, Integer id);
+
 
 }
