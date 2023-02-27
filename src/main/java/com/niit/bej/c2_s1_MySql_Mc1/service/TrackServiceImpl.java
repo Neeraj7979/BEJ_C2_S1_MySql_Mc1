@@ -23,7 +23,7 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public Track addNewTrack(Track track) {
-        return null;
+        return trackRepository.save(track);
     }
 
     @Override
