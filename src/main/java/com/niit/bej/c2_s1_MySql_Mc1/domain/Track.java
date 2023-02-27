@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.Objects;
+
 @Entity
 public class Track {
     @Id
@@ -64,5 +66,18 @@ public class Track {
 
     public void setTrackRatings(double trackRatings) {
         this.trackRatings = trackRatings;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Track track = (Track) o;
+        return trackId == track.trackId && Double.compare(track.trackRatings, trackRatings) == 0 && Objects.equals(trackName, track.trackName) && Objects.equals(trackComments, track.trackComments) && Objects.equals(trackArtist, track.trackArtist);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(trackId, trackName, trackComments, trackArtist, trackRatings);
     }
 }
