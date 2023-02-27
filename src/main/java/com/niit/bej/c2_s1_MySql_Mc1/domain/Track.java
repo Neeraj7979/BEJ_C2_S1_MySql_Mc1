@@ -22,4 +22,7 @@ public class Track {
         this.trackArtist = trackArtist;
         this.trackRatings = trackRatings;
     }
+
+    public Track() {
+    }
 }
