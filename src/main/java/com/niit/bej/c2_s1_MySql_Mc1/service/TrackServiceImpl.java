@@ -35,12 +35,26 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public Track updateTrack(Track track, Integer id) {
-        return null;
+        Optional<Track> trackOptional = trackRepository.findById(id);
+        Track existingTrack = null;
+        if (trackOptional.isEmpty())
+            return existingTrack;
+        else
+            existingTrack = trackOptional.get();
+        if (track.getTrackName() != null)
+            existingTrack.setTrackName(track.getTrackName());
+        if (track.getTrackArtist() != null)
+            existingTrack.setTrackArtist(track.getTrackArtist());
+        if (track.getTrackComments() != null)
+            existingTrack.setTrackComments(track.getTrackComments());
+        return trackRepository.save(existingTrack);
+
     }
 
     @Override
     public List<Track> fetchByArtistName(String artistName) {
-        return null;
+
+
     }
 
     @Override
