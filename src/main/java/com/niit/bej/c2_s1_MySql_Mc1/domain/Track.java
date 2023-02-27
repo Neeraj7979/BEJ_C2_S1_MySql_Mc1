@@ -80,4 +80,15 @@ public class Track {
     public int hashCode() {
         return Objects.hash(trackId, trackName, trackComments, trackArtist, trackRatings);
     }
+
+    @Override
+    public String toString() {
+        return "Track{" +
+                "trackId=" + trackId +
+                ", trackName='" + trackName + '\'' +
+                ", trackComments='" + trackComments + '\'' +
+                ", trackArtist='" + trackArtist + '\'' +
+                ", trackRatings=" + trackRatings +
+                '}';
+    }
 }
