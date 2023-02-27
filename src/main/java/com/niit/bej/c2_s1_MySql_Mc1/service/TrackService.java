@@ -15,5 +15,7 @@ public interface TrackService {
 
     List<Track> fetchByArtistName(String artistName);
 
+    boolean deleteATrack(Integer id);
+
 
 }
