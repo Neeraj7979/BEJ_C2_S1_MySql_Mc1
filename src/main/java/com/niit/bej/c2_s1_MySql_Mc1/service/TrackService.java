@@ -9,5 +9,7 @@ public interface TrackService {
 
     Track addNewTrack(Track track);
 
+    Track getTrackById(Integer id);
+
 
 }
