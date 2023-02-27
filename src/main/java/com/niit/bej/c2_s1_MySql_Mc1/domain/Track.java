@@ -83,12 +83,6 @@ public class Track {
 
     @Override
     public String toString() {
-        return "Track{" +
-                "trackId=" + trackId +
-                ", trackName='" + trackName + '\'' +
-                ", trackComments='" + trackComments + '\'' +
-                ", trackArtist='" + trackArtist + '\'' +
-                ", trackRatings=" + trackRatings +
-                '}';
+        return "Track{" + "trackId=" + trackId + ", trackName='" + trackName + '\'' + ", trackComments='" + trackComments + '\'' + ", trackArtist='" + trackArtist + '\'' + ", trackRatings=" + trackRatings + '}';
     }
 }
