@@ -7,4 +7,7 @@ import java.util.List;
 public interface TrackService {
     List<Track> getAllTrack();
 
+    Track addNewTrack(Track track);
+
+
 }
