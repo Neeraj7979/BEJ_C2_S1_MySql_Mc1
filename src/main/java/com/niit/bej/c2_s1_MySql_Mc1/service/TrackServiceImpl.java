@@ -1,10 +1,21 @@
 package com.niit.bej.c2_s1_MySql_Mc1.service;
 
 import com.niit.bej.c2_s1_MySql_Mc1.domain.Track;
+import com.niit.bej.c2_s1_MySql_Mc1.repository.TrackRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TrackServiceImpl implements TrackService {
+    TrackRepository trackRepository;
+
+    @Autowired
+    public TrackServiceImpl(TrackRepository trackRepository) {
+        this.trackRepository = trackRepository;
+    }
+
     @Override
     public List<Track> getAllTrack() {
         return null;
