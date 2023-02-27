@@ -18,7 +18,7 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public List<Track> getAllTrack() {
-        return null;
+        return (List<Track>) trackRepository.findAll();
     }
 
     @Override
