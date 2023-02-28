@@ -48,6 +48,8 @@ public class TrackController {
 
     }
 
+    @DeleteMapping("/deleteTrack/{id}")
+
     public ResponseEntity<?> deleteTrack(@PathVariable Integer id) {
         boolean status = trackService.deleteATrack(id);
         if (status) return new ResponseEntity<>(HttpStatus.ACCEPTED);
