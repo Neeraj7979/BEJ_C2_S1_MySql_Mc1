@@ -40,5 +40,19 @@ public class TrackController {
 
     }
 
+    @GetMapping("/getByArtistName/{artistName}")
+    public ResponseEntity<?> getTrackByArtistName(@PathVariable String trackName) {
+        List<Track> findByArtistName = trackService.fetchByArtistName(trackName);
+        if (findByArtistName.isEmpty()) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        else return new ResponseEntity<>(findByArtistName, HttpStatus.FOUND);
+
+    }
+
+    public ResponseEntity<?> deleteTrack(@PathVariable Integer id) {
+        boolean status = trackService.deleteATrack(id);
+        if (status) return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        else return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+    }
+
 
 }
